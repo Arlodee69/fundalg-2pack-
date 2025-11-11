@@ -27,11 +27,13 @@ int check_brackets(const char *str){
         else if(is_close_skobka(str[i])){
 
             if(is_empty(&stack)){
+                destroy(&stack);
                 return 0;
             }
 
             char up = pop(&stack);
             if (!matches(up, str[i])){
+                destroy(&stack);
                 return 0;
             }
         }
