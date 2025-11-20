@@ -1,0 +1,3 @@
+/home/anton/code/homework_alg2/pack3/task2/build/CMakeFiles/vector.dir
+/home/anton/code/homework_alg2/pack3/task2/build/CMakeFiles/edit_cache.dir
+/home/anton/code/homework_alg2/pack3/task2/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/vector.dir/src/main_str.c.o CMakeFiles/vector.dir/src/vector.c.o -o vector 
