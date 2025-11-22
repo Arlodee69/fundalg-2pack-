@@ -69,19 +69,19 @@ include CMakeFiles/vector.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/vector.dir/flags.make
 
-CMakeFiles/vector.dir/src/main_str.c.o: CMakeFiles/vector.dir/flags.make
-CMakeFiles/vector.dir/src/main_str.c.o: /home/anton/code/homework_alg2/pack3/task2/src/main_str.c
-CMakeFiles/vector.dir/src/main_str.c.o: CMakeFiles/vector.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anton/code/homework_alg2/pack3/task2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/vector.dir/src/main_str.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vector.dir/src/main_str.c.o -MF CMakeFiles/vector.dir/src/main_str.c.o.d -o CMakeFiles/vector.dir/src/main_str.c.o -c /home/anton/code/homework_alg2/pack3/task2/src/main_str.c
+CMakeFiles/vector.dir/src/main_int.c.o: CMakeFiles/vector.dir/flags.make
+CMakeFiles/vector.dir/src/main_int.c.o: /home/anton/code/homework_alg2/pack3/task2/src/main_int.c
+CMakeFiles/vector.dir/src/main_int.c.o: CMakeFiles/vector.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/anton/code/homework_alg2/pack3/task2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/vector.dir/src/main_int.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vector.dir/src/main_int.c.o -MF CMakeFiles/vector.dir/src/main_int.c.o.d -o CMakeFiles/vector.dir/src/main_int.c.o -c /home/anton/code/homework_alg2/pack3/task2/src/main_int.c
 
-CMakeFiles/vector.dir/src/main_str.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/vector.dir/src/main_str.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/code/homework_alg2/pack3/task2/src/main_str.c > CMakeFiles/vector.dir/src/main_str.c.i
+CMakeFiles/vector.dir/src/main_int.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/vector.dir/src/main_int.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/code/homework_alg2/pack3/task2/src/main_int.c > CMakeFiles/vector.dir/src/main_int.c.i
 
-CMakeFiles/vector.dir/src/main_str.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/vector.dir/src/main_str.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/code/homework_alg2/pack3/task2/src/main_str.c -o CMakeFiles/vector.dir/src/main_str.c.s
+CMakeFiles/vector.dir/src/main_int.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/vector.dir/src/main_int.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/code/homework_alg2/pack3/task2/src/main_int.c -o CMakeFiles/vector.dir/src/main_int.c.s
 
 CMakeFiles/vector.dir/src/vector.c.o: CMakeFiles/vector.dir/flags.make
 CMakeFiles/vector.dir/src/vector.c.o: /home/anton/code/homework_alg2/pack3/task2/src/vector.c
@@ -99,13 +99,13 @@ CMakeFiles/vector.dir/src/vector.c.s: cmake_force
 
 # Object files for target vector
 vector_OBJECTS = \
-"CMakeFiles/vector.dir/src/main_str.c.o" \
+"CMakeFiles/vector.dir/src/main_int.c.o" \
 "CMakeFiles/vector.dir/src/vector.c.o"
 
 # External object files for target vector
 vector_EXTERNAL_OBJECTS =
 
-vector: CMakeFiles/vector.dir/src/main_str.c.o
+vector: CMakeFiles/vector.dir/src/main_int.c.o
 vector: CMakeFiles/vector.dir/src/vector.c.o
 vector: CMakeFiles/vector.dir/build.make
 vector: CMakeFiles/vector.dir/link.txt

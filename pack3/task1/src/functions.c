@@ -5,6 +5,9 @@ status convert(const int number, const int r, char* output) {
         return INVALID_INPUT;
     }
 
+    if (number > INT_MAX || number < INT_MIN) {
+        return INVALID_INPUT;
+    }
     if (number == 0) {
         output[0] = '0';
         output[1] = '\0';

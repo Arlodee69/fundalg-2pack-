@@ -38,6 +38,12 @@ char pop(Stack *stack){
     if (!(is_empty(stack))) {
         return stack->data[--stack->count]; 
     }
+    if (stack->count * 2 <= stack->capacity){
+        stack->capacity = stack->capacity / 2;
+        char *temp = realloc(stack->data, stack->capacity);
+        if (!temp) return NULL;
+        stack->data = temp;
+    }
     return '0';
 }
 char top(Stack *stack){

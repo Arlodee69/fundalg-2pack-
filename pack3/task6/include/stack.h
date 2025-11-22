@@ -1,4 +1,5 @@
-#pragma once
+#ifndef STACK_H
+#define STACK_H
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -18,3 +19,5 @@ Stack *push(Stack *stack, char data);
 char pop(Stack *stack);
 char top(Stack *stack);
 size_t get_size(Stack *stack);
+
+#endif

@@ -129,29 +129,29 @@ vector/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/build
 .PHONY : vector/fast
 
-src/main_str.o: src/main_str.c.o
-.PHONY : src/main_str.o
+src/main_int.o: src/main_int.c.o
+.PHONY : src/main_int.o
 
 # target to build an object file
-src/main_str.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/src/main_str.c.o
-.PHONY : src/main_str.c.o
+src/main_int.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/src/main_int.c.o
+.PHONY : src/main_int.c.o
 
-src/main_str.i: src/main_str.c.i
-.PHONY : src/main_str.i
+src/main_int.i: src/main_int.c.i
+.PHONY : src/main_int.i
 
 # target to preprocess a source file
-src/main_str.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/src/main_str.c.i
-.PHONY : src/main_str.c.i
+src/main_int.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/src/main_int.c.i
+.PHONY : src/main_int.c.i
 
-src/main_str.s: src/main_str.c.s
-.PHONY : src/main_str.s
+src/main_int.s: src/main_int.c.s
+.PHONY : src/main_int.s
 
 # target to generate assembly for a file
-src/main_str.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/src/main_str.c.s
-.PHONY : src/main_str.c.s
+src/main_int.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/src/main_int.c.s
+.PHONY : src/main_int.c.s
 
 src/vector.o: src/vector.c.o
 .PHONY : src/vector.o
@@ -186,9 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... vector"
-	@echo "... src/main_str.o"
-	@echo "... src/main_str.i"
-	@echo "... src/main_str.s"
+	@echo "... src/main_int.o"
+	@echo "... src/main_int.i"
+	@echo "... src/main_int.s"
 	@echo "... src/vector.o"
 	@echo "... src/vector.i"
 	@echo "... src/vector.s"

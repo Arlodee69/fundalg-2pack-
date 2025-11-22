@@ -7,7 +7,7 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 include_directories(include)
 
 add_executable(vector
-    src/main_str.c
+    src/main_int.c
     src/vector.c
 )
 

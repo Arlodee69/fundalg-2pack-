@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/anton/code/homework_alg2/pack3/task2/src/main_str.c" "CMakeFiles/vector.dir/src/main_str.c.o" "gcc" "CMakeFiles/vector.dir/src/main_str.c.o.d"
+  "/home/anton/code/homework_alg2/pack3/task2/src/main_int.c" "CMakeFiles/vector.dir/src/main_int.c.o" "gcc" "CMakeFiles/vector.dir/src/main_int.c.o.d"
   "/home/anton/code/homework_alg2/pack3/task2/src/vector.c" "CMakeFiles/vector.dir/src/vector.c.o" "gcc" "CMakeFiles/vector.dir/src/vector.c.o.d"
   )
 

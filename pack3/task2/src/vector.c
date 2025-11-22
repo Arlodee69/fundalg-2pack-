@@ -1,4 +1,3 @@
-#include "../include/vector_config.h"
 #include "../include/vector.h"
 
 
@@ -35,8 +34,6 @@ void erase_vector(Vector *v){
 
 int is_equal_vector(const Vector *v1, const Vector *v2, int (*comp)(VECTOR_TYPE, VECTOR_TYPE)){
     if (!v1 || !v2) return 0;
-    if (!v1->CopyVoidPtr || !v1->DeleteVoidPtr) return 0;
-    if (!v2->CopyVoidPtr || !v2->DeleteVoidPtr) return 0;
     if (v1->size != v2->size) return 0;
 
     for (size_t i = 0; i < v1->size; i++) {
@@ -53,18 +50,22 @@ void copy_vector(Vector *dest, const Vector *src){
     if (dest == src) return;
     erase_vector(dest);
 
-    if (dest->capacity < src->size) {
-        VECTOR_TYPE *new_data = realloc(dest->data, src->size * sizeof(VECTOR_TYPE));
-        if (!new_data) return;
-        dest->data = new_data;
-        dest->capacity = src->size;
+    dest->data = malloc(src->capacity * sizeof(VECTOR_TYPE));
+    if (!dest->data) {
+        dest->size = 0;
+        dest->capacity = 0;
+        return;
     }
+
+    dest->capacity = src->capacity;
+    dest->size = src->size;
+
+    dest->CopyVoidPtr = src->CopyVoidPtr;
+    dest->DeleteVoidPtr = src->DeleteVoidPtr;
 
     for (size_t i = 0; i < src->size; i++) {
         dest->data[i] = dest->CopyVoidPtr(src->data[i]);
     }
-
-    dest->size = src->size;
 }
 
 
@@ -74,9 +75,21 @@ Vector *copy_vector_new(const Vector *src){
 
     Vector *new_v = malloc(sizeof(Vector));
     if (!new_v) return NULL;
+    new_v->data = malloc(src->capacity * sizeof(VECTOR_TYPE));
+    if (!new_v->data) {
+        free(new_v);
+        return NULL;
+    }
 
-    *new_v = create_vector(src->capacity, src->CopyVoidPtr, src->DeleteVoidPtr);
-    copy_vector(new_v, src);
+    new_v->capacity = src->capacity;
+    new_v->size = src->size;
+
+    new_v->CopyVoidPtr = src->CopyVoidPtr;
+    new_v->DeleteVoidPtr = src->DeleteVoidPtr;
+
+    for (size_t i = 0; i < src->size; i++) {
+        new_v->data[i] = src->CopyVoidPtr(src->data[i]);
+    }
 
     return new_v;
 }
@@ -102,6 +115,13 @@ void delete_at_vector(Vector *v, size_t index){
         v->data[i] = v->data[i + 1];
     }
     v->size--;
+
+    if (v->size * 2 <= v->capacity){
+        v->capacity = v->capacity / 2;
+        VECTOR_TYPE *newdata = realloc(v, v->capacity * sizeof(VECTOR_TYPE));
+        if (!newdata) return;
+        v->data = newdata;
+    }
 }
 
 VECTOR_TYPE get_at_vector(const Vector *v, size_t index){
